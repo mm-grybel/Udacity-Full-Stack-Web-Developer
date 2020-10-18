@@ -1,4 +1,4 @@
-This repository contains the projects from the **Udacity Full Stack Web Developer Nanodegree**:
+This repository contains projects from the **Udacity Full Stack Web Developer Nanodegree**:
 * ToDo List App [View the README.md for details.](./ToDo-List-App/README.md)
 * Bookshelf App [View the README.md for details.](./Bookshelf-App/README.md)
 * Fyyur: Artist Booking Site [View the README.md for details.](./Fyyur-Artist-Booking-Site/README.md)
