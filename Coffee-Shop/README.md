@@ -2,10 +2,10 @@
 
 The Coffee Shop application allows for:
 
-1) Displaying graphics representing the ratios of ingredients in each drink.
-2) Public users can view drink names and graphics.
+1) Displaying the graphics representing the ratios of ingredients in each drink.
+2) Public users can view the names of the drinks and the graphics.
 3) The shop baristas can see the recipe information.
-4) The shop managers can create new drinks and edit existing drinks.
+4) The shop managers can create new drinks and edit the existing drinks.
 
 ### Backend
 
