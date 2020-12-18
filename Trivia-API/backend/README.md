@@ -22,17 +22,20 @@ This will install all of the required packages within the `requirements.txt` fil
 
 - [Flask](http://flask.pocoo.org/)  is a lightweight backend microservices framework. Flask is required to handle requests and responses.
 
-- [SQLAlchemy](https://www.sqlalchemy.org/) is the Python SQL toolkit and ORM used to handle the lightweight sqlite database.
+- [SQLAlchemy](https://www.sqlalchemy.org/) is a Python SQL toolkit and an ORM used to handle a lightweight SQLite database.
 
-- [Flask-CORS](https://flask-cors.readthedocs.io/en/latest/#) is the extension used to handle cross origin requests from the frontend server. 
+- [Flask-CORS](https://flask-cors.readthedocs.io/en/latest/#) is an extension used to handle cross origin requests from the frontend server. 
 
 ## Database Setup
-With PostgreSQL running, restore a database using the trivia.psql file provided. From the backend folder in terminal run:
+
+With PostgreSQL running, restore a database using the trivia.psql file provided. From the `backend` directory in terminal run:
+
 ```bash
 psql trivia < trivia.psql
 ```
 
 ## Running the server
+
 To run the server, execute from within the `backend` directory:
 
 ```bash
@@ -43,7 +46,7 @@ flask run
 
 Setting the `FLASK_ENV` variable to `development` will detect file changes and restart the server automatically.
 
-Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` directory and the `__init__.py` file to find the application. 
+Setting the `FLASK_APP` variable to `flaskr` directs Flask to use the `flaskr` directory and the `__init__.py` file to find the application. 
 
 ## API Reference
 
@@ -68,7 +71,7 @@ The API will return four error types when requests fail:
 **GET /questions**
 - Fetches a list of all questions, paginated in groups of 10
 - Request Arguments: `page` (integer, optional, defaults to 1)
-- Returns a list of question objects, success value, total number of questions, categories and current category.
+- Returns a list of question objects, the success value, the total number of questions, all categories and the current category.
 - Sample: `curl http://127.0.0.1:5000/questions`
 
 ```
@@ -162,7 +165,7 @@ The API will return four error types when requests fail:
 **GET /categories**
 - Fetches a list of all categories
 - Request Arguments: None
-- Returns a list of category objects, success value, and total number of categories.
+- Returns a list of category objects, the success value, and the total number of categories.
 - Sample: `curl http://127.0.0.1:5000/categories`
 
 ```
@@ -185,7 +188,7 @@ The API will return four error types when requests fail:
 - Request Arguments: 
   - `category_id` (integer, mandatory)
   - `page` (integer, optional, defaults to 1)
-- Returns a list of questions based on category, success value, total number of questions and current category.
+- Returns a list of questions based on category, the success value, the total number of questions and the current category.
 - Sample: `curl http://127.0.0.1:5000/categories/6/questions`
 
 ```
@@ -215,7 +218,7 @@ The API will return four error types when requests fail:
 **DELETE /questions/{question_id}**
 - Deletes the question of the given ID if it exists.
 - Request Arguments: `question_id` (integer, mandatory)
-- Returns the id of the deleted question, success value, total questions, and question list based on the current page number to update the frontend. 
+- Returns the id of the deleted question, the success value, the total number of questions, and the question list based on the current page number to update the frontend. 
 - Sample: `curl -X DELETE http://127.0.0.1:5000/questions/36?page=3`
 
 ```
@@ -238,7 +241,7 @@ The API will return four error types when requests fail:
 **POST /questions**
 - Creates a new question using the submitted question and answer text, category, and difficulty score.
 - Request Arguments: None
-- Returns the id of the created question, success value, total number of questions, and question list based on the current page number to update the frontend.
+- Returns the id of the created question, the success value, the total number of questions, and the question list based on the current page number to update the frontend.
 - Sample: `curl http://127.0.0.1:5000/questions?page=3 -X POST -H "Content-Type: application/json" -d '{"question":"Who played the Joker character in the Dark Knight movie?", "answer":"Heath Ledger", "category":"5", "difficulty":"3"}'`
 
 ```
@@ -268,7 +271,7 @@ The API will return four error types when requests fail:
 **POST /questions/search**
 - Searches for a question based on a search term.
 - Request Arguments: None
-- Returns questions that match the search term, success value and total questions.    
+- Returns questions that match the search term, the success value and the total number of questions.    
 - Sample: `curl http://127.0.0.1:5000/questions/search -X POST -H "Content-Type: application/json" -d '{"searchTerm":"Tom Hanks"}'`
 
 ```
@@ -290,7 +293,7 @@ The API will return four error types when requests fail:
 **POST /quizzes**
 - Initiates (or continues) a quiz, returning a question at random based on the selected category (or any category, if "ALL" was selected).
 - Request Arguments: None
-- Returns a random questions within the given category, if provided (not one of the previous questions) and success value.
+- Returns a random questions within the given category, if provided (not one of the previous questions) and the success value.
 - Sample: `curl http://127.0.0.1:5000/quizzes -X POST -H "Content-Type: application/json" -d '{"previous_questions":[],"quiz_category":{"type":"click","id":0}}'`
 
 ```
@@ -307,7 +310,8 @@ The API will return four error types when requests fail:
 ```
 
 ## Testing
-To run the tests, run
+To run the tests, execute:
+
 ```
 dropdb trivia_test
 createdb trivia_test
