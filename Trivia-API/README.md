@@ -5,7 +5,7 @@ The Trivia API application allows for:
 1) Adding and deleting questions.
 2) Displaying the existing questions - all questions and questions by category.
 4) Searching for questions based on a text query string.
-5) Playing the quiz game, randomizing either all questions or within a specific category. 
+5) Playing the quiz game, randomizing either all questions or questions within a specific category. 
 
 ### Backend
 
