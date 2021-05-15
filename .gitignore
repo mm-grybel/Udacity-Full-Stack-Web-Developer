@@ -1,3 +1,4 @@
 .DS_Store
+.idea
 *.pyc
-Trivia-API/frontend/node_modules
+venv
