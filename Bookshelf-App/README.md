@@ -11,10 +11,12 @@ Developers using this project should already have Python 3 and pip installed.
 ### Backend
 From the backend folder run `pip install -r requirements.txt`. All required packages are included in the requirements file.
 
-To run the application locally, run the following commands: <br>
-`export FLASK_APP=flaskr` <br>
-`export FLASK_ENV=development` <br>
-`flask run`
+To run the application locally, run the following commands:
+```bash
+export FLASK_APP=flaskr
+export FLASK_ENV=development
+flask run
+```
 
 These commands put the application in the development mode and direct the application to use the `__init__.py` file in the `flaskr` folder. Working in the development mode shows an interactive debugger in the console and restarts the server whenever any changes are made.
 
@@ -35,7 +37,7 @@ All tests are kept in that file and should be maintained as updates are made to 
 ### Error Handling
 Errors are returned as JSON objects in the following format:
 
-```
+```json
 {
     "success": False,
     "error": 400,
@@ -55,7 +57,7 @@ The API will return three error types when requests fail:
     - Results are paginated in the groups of 8. Include a request argument to choose the page number, starting from 1.
 - Sample: `curl http://127.0.0.1:5000/books`
 
-```
+```json
 {
   "books": [
     {
@@ -105,7 +107,7 @@ The API will return three error types when requests fail:
     - Creates a new book using the submitted title, author and rating. Returns the id of the created book, the success value, and the book list based on the current page number to update the frontend.
 - Sample: `curl http://127.0.0.1:5000/books?page=3 -X POST -H "Content-Type: application/json" -d '{"title":"This Is Going to Hurt: Secret Diaries of a Junior Doctor", "author":"Adam Kay", "rating":"5"}'`
 
-```
+```json
 {
   "books": [
       {
@@ -126,7 +128,7 @@ The API will return three error types when requests fail:
     - Deletes the book of the given ID if it exists. Returns the id of the deleted book, the success value, the total number of books, and the book list based on the current page number to update the frontend.
 - Sample: `curl -X DELETE http://127.0.0.1:5000/books/2?page=1`
 
-```
+```json
 {
   "books": [
     {
@@ -177,7 +179,7 @@ The API will return three error types when requests fail:
     - If provided, updates the rating of the specified book. Returns the success value and the id of the modified book.
 - Sample: `curl http://127.0.0.1:5000/books/3 -X PATCH -H "Content-Type: application/json" -d '{"rating":"4"}'`
 
-```
+```json
 {
   "id": 3, 
   "success": true
